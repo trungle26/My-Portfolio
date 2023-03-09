@@ -23,3 +23,17 @@ linkedin.forEach(button=>{
     });
 });
 
+const email = document.getElementById('email');
+const call = document.getElementById('call');
+email.addEventListener('click',function(){
+    const email = 'leductrung8520@gmail.com';
+    const subject = '';
+    const body = '';
+    const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+});
+call.addEventListener('click',function(){
+    const phoneNumber = '0948314812';
+    const telLink = `tel:${phoneNumber}`;
+    window.location.href = telLink;
+})

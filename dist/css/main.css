@@ -62,17 +62,32 @@ a {
   margin-left: 30px;
   margin-right: 30px;
 }
+.about-me .pattern {
+  position: absolute;
+  top: 200px;
+  left: -150px;
+  z-index: -1;
+}
+.about-me .pattern2 {
+  position: absolute;
+  top: 500px;
+  right: 47%;
+  z-index: 1;
+}
 .about-me .nav {
   margin-top: 1rem;
 }
 .about-me .avatar {
-  width: 30vw;
+  width: 50vw;
 }
 .about-me .about-me__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.about-me .about-me__content h1 {
+  font-size: 3rem;
 }
 .about-me .about-me__content h3, .about-me .about-me__content h1 > a {
   text-decoration: underline;
@@ -91,15 +106,28 @@ a {
 }
 @media (min-width: 768px) {
   .about-me {
-    display: flex;
-    flex-direction: row;
+    height: 800px;
   }
   .about-me .avatar {
-    order: 1;
-    max-width: 340px;
+    position: absolute;
+    right: -30px;
+    bottom: 5px;
+    height: 800px;
+    width: auto;
   }
   .about-me .about-me__content {
-    order: 0;
+    position: absolute;
+    width: 70%;
+    left: 0;
+    top: 200px;
+  }
+  .about-me .about-me__content h1 {
+    text-align: left;
+    font-size: 5rem;
+  }
+  .about-me .about-me__content p {
+    text-align: left;
+    font-size: 1rem;
   }
 }
 
@@ -165,21 +193,39 @@ a {
   text-underline-offset: 0.45rem;
 }
 @media (min-width: 768px) {
+  .projects .projects__item {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
   .projects .projects__placeholder {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-auto-flow: row;
-    grid-auto-rows: minmax(auto, 450px);
-    grid-auto-columns: minmax(auto, 450px);
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 10px;
   }
 }
 
 .contact {
+  position: relative;
   padding: 30px;
   display: flex;
   flex-direction: column;
   background-color: rgb(36, 36, 36);
+}
+.contact .pattern {
+  position: absolute;
+  bottom: 150px;
+  right: -10%;
+  z-index: 0;
 }
 .contact h1, .contact p {
   align-self: center;
@@ -196,10 +242,15 @@ a {
   flex-direction: row;
 }
 .contact .contact__actions .contact__actions__button {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 30px;
+}
+.contact .contact__actions .contact__actions__button:hover {
+  cursor: pointer;
+  color: #4ee1a0;
 }
 .contact .contact__social {
   display: flex;
