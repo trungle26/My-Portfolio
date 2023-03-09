@@ -1,0 +1,33 @@
+$primary-color:#4ee1a0;
+$text-color:white;
+$paragraph-color:rgb(226, 214, 214);
+$secondary-color:rgb(36 36 36 / 1);
+
+html{
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: black;
+    color:$text-color;
+    max-width: 1280px;
+    margin: auto;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+    margin:0px;
+    padding:0px;
+}
+p,h2,h3{
+    margin-top:10px;
+}
+h1{
+    margin-top:20px;
+}
+a{
+    text-decoration: none;
+    color:$text-color;
+}
+@mixin tablet{
+    @media (min-width:768px) {
+        @content;
+    }
+}

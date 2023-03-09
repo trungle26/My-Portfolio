@@ -1,0 +1,212 @@
+html {
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: black;
+  color: white;
+  max-width: 1280px;
+  margin: auto;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+p, h2, h3 {
+  margin-top: 10px;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgba(0, 0, 0, 0.719);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.nav-bar .nav-bar__icons:hover {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+  }
+}
+
+.about-me {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  border-bottom: 2px solid white;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.about-me .nav {
+  margin-top: 1rem;
+}
+.about-me .avatar {
+  width: 30vw;
+}
+.about-me .about-me__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-me .about-me__content h3, .about-me .about-me__content h1 > a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #4ee1a0;
+  text-underline-offset: 0.45rem;
+}
+.about-me .about-me__content p {
+  text-align: center;
+}
+.about-me .about-me__content h3 {
+  padding: 3rem;
+}
+.about-me .about-me__content h3:hover {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .about-me {
+    display: flex;
+    flex-direction: row;
+  }
+  .about-me .avatar {
+    order: 1;
+    max-width: 340px;
+  }
+  .about-me .about-me__content {
+    order: 0;
+  }
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  border-bottom: 2px solid white;
+  padding-bottom: 3rem;
+}
+.experience .experience__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+  }
+}
+
+.projects {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.projects .projects__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.projects .projects__heading h3 {
+  text-decoration: underline;
+  text-decoration-color: #4ee1a0;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45rem;
+}
+.projects .projects__item {
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 30px;
+  padding: 3rem;
+}
+.projects .projects__item p {
+  color: rgb(226, 214, 214);
+}
+.projects .projects__item img {
+  width: 90%;
+  max-width: 400px;
+}
+.projects .projects__item h3 > a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #4ee1a0;
+  text-underline-offset: 0.45rem;
+}
+@media (min-width: 768px) {
+  .projects .projects__placeholder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-auto-rows: minmax(auto, 450px);
+    grid-auto-columns: minmax(auto, 450px);
+  }
+}
+
+.contact {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(36, 36, 36);
+}
+.contact h1, .contact p {
+  align-self: center;
+}
+.contact i {
+  font-size: 3rem;
+}
+.contact h3 {
+  padding-bottom: 30px;
+}
+.contact .contact__actions {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+.contact .contact__actions .contact__actions__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+.contact .contact__social {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.contact .contact__social .contact__social__icons img:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
